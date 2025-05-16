@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution URL](https://your-solution-url.com)
-- Live Site URL: [Live site URL](https://your-live-site-url.com)
+- Solution URL: [Solution URL](https://www.frontendmentor.io/solutions/clock-app--Moph87wxY)
+- Live Site URL: [Live site URL](https://mobina-dev-2001.github.io/clock-app/)
 
 ## My process
 

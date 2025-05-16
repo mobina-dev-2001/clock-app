@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+@plugin "daisyui";
+
+@theme {
+    --color-dusty-gray: hsl(0, 0%, 60%);
+    --color-mine-shaft: hsl(0, 0%, 19%);
+    --font-inter: "Inter", sans-serif;
+
+    --animate-fade-in: fade-in 0.3s ease-out forwards;
+    @keyframes fade-in {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+}
+
+@layer utilities {
+    body {scrollbar-gutter: stable;}
+
+    .bg-day {
+        background-image: url(/images/bg-image-daytime-desktop.jpg);
+    }
+    @media (max-width: 769px) {
+        .bg-day {background-image: url(/images/bg-image-daytime-tablet.jpg);}
+    }
+    @media (max-width: 376px) {
+        .bg-day {background-image: url(/images/bg-image-daytime-mobile.jpg);}
+    }
+
+    .bg-night {
+        background-image: url(/images/bg-image-nighttime-desktop.jpg);
+    }
+    @media (max-width: 769px) {
+        .bg-night {background-image: url(/images/bg-image-nighttime-tablet.jpg);}
+    }
+    @media (max-width: 376px) {
+        .bg-night {background-image: url(/images/bg-image-nighttime-mobile.jpg);}
+    }
+}

@@ -12,7 +12,7 @@ export default function Quotes({ hidden = false }) {
     setLoading(true);
     try {
       const quoteDataResponse = await fetch(
-        "https://api.api-ninjas.com/v1/quotes",
+        "/api/quotes",
         { headers: { "X-Api-Key": import.meta.env.VITE_QUOTES_API_KEY } }
       );
 

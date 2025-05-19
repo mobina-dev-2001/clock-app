@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import Ipbase from "@everapi/ipbase-js";
 import { isDaytime, getTimeOfDay } from "../utils/timeUtils";
 import { useBodyClass } from "../utils/useBodyClass";
 import Loader from "./Loader";
@@ -34,9 +33,9 @@ export default function Clock({ expanded, setExpanded }) {
       }
 
       try {
-        const ipbase = new Ipbase(import.meta.env.VITE_IPBASE_API_KEY);
-        const res = await ipbase.info();
-        setIpInfo(res.data);
+        const res = await fetch("/api/ipinfo");
+        const json = await res.json();
+        setIpInfo(json.data);
         sessionStorage.setItem("ipInfo", JSON.stringify(res.data));
       } catch (err) {
         console.error("IP detection failed: ", err);
